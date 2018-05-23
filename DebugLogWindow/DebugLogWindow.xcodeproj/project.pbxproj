@@ -15,6 +15,11 @@
 		BA0E411C20B415AB00380FC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E411B20B415AB00380FC1 /* main.m */; };
 		BA0E412620B415AB00380FC1 /* DebugLogWindowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E412520B415AB00380FC1 /* DebugLogWindowTests.m */; };
 		BA0E413120B415AB00380FC1 /* DebugLogWindowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E413020B415AB00380FC1 /* DebugLogWindowUITests.m */; };
+		BA0E414320B41A1F00380FC1 /* DLogDataBaseMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E414220B41A1F00380FC1 /* DLogDataBaseMgr.m */; };
+		BA0E414620B4221800380FC1 /* DLogDBTable.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E414520B4221800380FC1 /* DLogDBTable.m */; };
+		BA0E414A20B4223C00380FC1 /* DlogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E414920B4223C00380FC1 /* DlogModel.m */; };
+		BA0E414E20B501C200380FC1 /* DLogWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E414D20B501C200380FC1 /* DLogWindowView.m */; };
+		BA0E415220B50D3F00380FC1 /* DLogTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E415120B50D3F00380FC1 /* DLogTool.m */; };
 		CA2416C9A915E5A750B0B795 /* libPods-DebugLogWindow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A80D53DD215E167FA653FC0B /* libPods-DebugLogWindow.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +59,16 @@
 		BA0E412C20B415AB00380FC1 /* DebugLogWindowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DebugLogWindowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0E413020B415AB00380FC1 /* DebugLogWindowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebugLogWindowUITests.m; sourceTree = "<group>"; };
 		BA0E413220B415AB00380FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA0E414120B41A1F00380FC1 /* DLogDataBaseMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLogDataBaseMgr.h; sourceTree = "<group>"; };
+		BA0E414220B41A1F00380FC1 /* DLogDataBaseMgr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLogDataBaseMgr.m; sourceTree = "<group>"; };
+		BA0E414420B4221800380FC1 /* DLogDBTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLogDBTable.h; sourceTree = "<group>"; };
+		BA0E414520B4221800380FC1 /* DLogDBTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLogDBTable.m; sourceTree = "<group>"; };
+		BA0E414820B4223C00380FC1 /* DlogModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DlogModel.h; sourceTree = "<group>"; };
+		BA0E414920B4223C00380FC1 /* DlogModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DlogModel.m; sourceTree = "<group>"; };
+		BA0E414C20B501C200380FC1 /* DLogWindowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLogWindowView.h; sourceTree = "<group>"; };
+		BA0E414D20B501C200380FC1 /* DLogWindowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLogWindowView.m; sourceTree = "<group>"; };
+		BA0E415020B50D3F00380FC1 /* DLogTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLogTool.h; sourceTree = "<group>"; };
+		BA0E415120B50D3F00380FC1 /* DLogTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLogTool.m; sourceTree = "<group>"; };
 		EBD5C4D57DB2E9B754F571C9 /* Pods-DebugLogWindow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugLogWindow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DebugLogWindow/Pods-DebugLogWindow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +175,10 @@
 		BA0E413E20B415C300380FC1 /* DebugLogWindow */ = {
 			isa = PBXGroup;
 			children = (
+				BA0E414F20B50D1D00380FC1 /* Tool */,
+				BA0E414B20B500CF00380FC1 /* Mgr */,
+				BA0E414720B4222C00380FC1 /* Model */,
+				BA0E414020B4199800380FC1 /* DB */,
 				BA0E413F20B416C800380FC1 /* UI */,
 			);
 			path = DebugLogWindow;
@@ -168,8 +187,46 @@
 		BA0E413F20B416C800380FC1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BA0E414C20B501C200380FC1 /* DLogWindowView.h */,
+				BA0E414D20B501C200380FC1 /* DLogWindowView.m */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		BA0E414020B4199800380FC1 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				BA0E414120B41A1F00380FC1 /* DLogDataBaseMgr.h */,
+				BA0E414220B41A1F00380FC1 /* DLogDataBaseMgr.m */,
+				BA0E414420B4221800380FC1 /* DLogDBTable.h */,
+				BA0E414520B4221800380FC1 /* DLogDBTable.m */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		BA0E414720B4222C00380FC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA0E414820B4223C00380FC1 /* DlogModel.h */,
+				BA0E414920B4223C00380FC1 /* DlogModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA0E414B20B500CF00380FC1 /* Mgr */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mgr;
+			sourceTree = "<group>";
+		};
+		BA0E414F20B50D1D00380FC1 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				BA0E415020B50D3F00380FC1 /* DLogTool.h */,
+				BA0E415120B50D3F00380FC1 /* DLogTool.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,7 +416,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA0E414E20B501C200380FC1 /* DLogWindowView.m in Sources */,
+				BA0E415220B50D3F00380FC1 /* DLogTool.m in Sources */,
+				BA0E414620B4221800380FC1 /* DLogDBTable.m in Sources */,
+				BA0E414A20B4223C00380FC1 /* DlogModel.m in Sources */,
 				BA0E411120B415AB00380FC1 /* ViewController.m in Sources */,
+				BA0E414320B41A1F00380FC1 /* DLogDataBaseMgr.m in Sources */,
 				BA0E411C20B415AB00380FC1 /* main.m in Sources */,
 				BA0E410E20B415AB00380FC1 /* AppDelegate.m in Sources */,
 			);
@@ -464,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -513,7 +575,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -526,7 +588,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ERYNAFK87;
 				INFOPLIST_FILE = DebugLogWindow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = luochaojing.DebugLogWindow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -540,7 +604,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ERYNAFK87;
 				INFOPLIST_FILE = DebugLogWindow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = luochaojing.DebugLogWindow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
