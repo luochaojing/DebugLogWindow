@@ -34,13 +34,20 @@
 }
 
 - (void)creatTimer {
-    NSTimer *timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(addText) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:.1 target:self selector:@selector(addText) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)addText {
     static NSInteger i = 0;
+    if (i > 15) {
+        return;
+    }
     NSString *appendText = [NSString stringWithFormat:@"标签ADFDSFASDSDFASDFASDFASDFD你今天去哪里干点什么啊啊啊啊今天早餐的是三个包子还是三万州么的：%@\n", @(i)];
+//    for (NSInteger x = 0; x < 5; x++) {
+//        appendText = [appendText stringByAppendingString:appendText];
+//    }
+    NSLog(@"%@", appendText);
     [self.logView addText:appendText];
     i++;
 }

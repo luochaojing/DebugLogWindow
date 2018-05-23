@@ -44,6 +44,8 @@
     [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];
+
+    
 }
 
 #pragma mark - UITextViewDelegate
@@ -66,10 +68,10 @@
 
 - (void)addText:(NSString *)appendStr {
     [self.totalString appendString:appendStr];
-    self.textView.text = self.totalString;
     if (self.isUserTouching) {
         return;
     }
+    self.textView.text = self.totalString;
     [self.textView scrollRangeToVisible:NSMakeRange(self.totalString.length, 1)];
 }
 
