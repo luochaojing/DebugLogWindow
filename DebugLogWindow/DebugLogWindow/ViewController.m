@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "DLogWindowView.h"
 #import <Masonry.h>
+#import "DLogDataBaseMgr.h"
+#import "DlogModel.h"
 
 @interface ViewController ()
 
@@ -31,6 +33,8 @@
         make.bottom.equalTo(self.view).offset(-40);
     }];
     [self creatTimer];
+    
+    [self testDB];
 }
 
 - (void)creatTimer {
@@ -43,10 +47,8 @@
     if (i > 15) {
         return;
     }
-    NSString *appendText = [NSString stringWithFormat:@"标签ADFDSFASDSDFASDFASDFASDFD你今天去哪里干点什么啊啊啊啊今天早餐的是三个包子还是三万州么的：%@\n", @(i)];
-//    for (NSInteger x = 0; x < 5; x++) {
-//        appendText = [appendText stringByAppendingString:appendText];
-//    }
+    NSString *appendText = [NSString stringWithFormat:@"么的：%@\n", @(i)];
+
     NSLog(@"%@", appendText);
     [self.logView addText:appendText];
     i++;
@@ -58,5 +60,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)testDB {
+    DlogModel *model = [[DlogModel alloc] init];
+    model.keysArr = @[@"key1", @"key2"];
+    model.content = @"content1";
+    model.date = [NSDate date];
+    [[DLogDataBaseMgr shared] addLogModel:model];
+}
 
 @end

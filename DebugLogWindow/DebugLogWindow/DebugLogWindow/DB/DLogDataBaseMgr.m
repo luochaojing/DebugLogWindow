@@ -6,13 +6,18 @@
 //  Copyright © 2018年 luochaojing. All rights reserved.
 //
 
+
+//#if FMDB_SQLITE_STANDALONE
+//#import <sqlite3/sqlite3.h>
+//#else
+//#import <sqlite3.h>
+//#endif
 #import "DLogDataBaseMgr.h"
 #import <FMDB.h>
-#if FMDB_SQLITE_STANDALONE
-#import <sqlite3/sqlite3.h>
-#else
+#import "DLogDBTable.m"
 #import <sqlite3.h>
-#endif
+
+
 
 @interface DLogDataBaseMgr()
 
@@ -49,8 +54,21 @@
     _dbQueue = [[FMDatabaseQueue alloc] initWithPath:_dbPath flags:SQLITE_OPEN_FILEPROTECTION_NONE | SQLITE_OPEN_CREATE | SQLITE_OPEN_READWRITE | SQLITE_OPEN_WAL];
     _dispatchQueue = [[NSOperationQueue alloc] init];
     _dispatchQueue.maxConcurrentOperationCount = 1;
+    [self inAsyncMainDatabase:^(FMDatabase *db) {
+        [DLogDBTable createLogTableInDb:db];
+    }];
 }
 
-//- (void)
+- (void)inAsyncMainDatabase:(void(^)(FMDatabase *db))then {
+    [self.dispatchQueue addOperationWithBlock:^{
+        [self.dbQueue inDatabase:then];
+    }];
+}
+
+- (void)addLogModel:(DlogModel *)logModel {
+    [self inAsyncMainDatabase:^(FMDatabase *db) {
+        [DLogDBTable insertLogModel:logModel toDb:db];
+    }];
+}
 
 @end

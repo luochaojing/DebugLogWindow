@@ -13,6 +13,7 @@
 
 @interface DLogDBTable : NSObject
 
+/// 是否需要数据库呢
 + (void)insertLogModel:(DlogModel *)logModel toDb:(FMDatabase *)db;
-
++ (BOOL)createLogTableInDb:(FMDatabase *)db;
 @end

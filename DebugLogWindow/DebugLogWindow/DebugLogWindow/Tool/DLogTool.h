@@ -14,4 +14,7 @@
 /// NSValue with NSRange
 + (NSArray *)testSearch:(NSString *)searchStr inMotherStr:(NSString *)motherStr;
 
++ (NSNumber *)timestampWithDate:(NSDate *)date;
++ (NSDate *)dateWithTimestampNum:(NSNumber *)timestampNum;
+
 @end

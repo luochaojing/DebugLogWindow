@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class FMDatabase;
 @class DlogModel;
+
 @interface DLogDataBaseMgr : NSObject
 
-- (void)insertLogModel;
++ (DLogDataBaseMgr *)shared;
+
+- (void)addLogModel:(DlogModel *)logModel;
 
 @end

@@ -10,10 +10,10 @@
 
 @interface DlogModel : NSObject
 
+@property (nonatomic, copy) NSNumber *logID;
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, copy) NSArray<NSString *> *keysArr;
 @property (nonatomic, copy) NSString *content;
-@property (nonatomic, copy) NSNumber *logID;
 
 
 @end

@@ -26,4 +26,20 @@
     return rangeArr.copy;
 }
 
+
++ (NSNumber *)timestampWithDate:(NSDate *)date {
+    if (!date) {
+        return @0.0;
+    }
+    NSInteger t = [date timeIntervalSince1970] * 1000;
+    return @(t);
+}
+
++ (NSDate *)dateWithTimestampNum:(NSNumber *)timestampNum {
+    if (!timestampNum) {
+        return nil;
+    }
+    return [NSDate dateWithTimeIntervalSince1970:timestampNum.doubleValue / 1000.0];
+}
+
 @end

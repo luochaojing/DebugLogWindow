@@ -44,8 +44,6 @@
     [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];
-
-    
 }
 
 #pragma mark - UITextViewDelegate
