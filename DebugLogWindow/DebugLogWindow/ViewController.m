@@ -23,7 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     DLogWindowView *view = [[DLogWindowView alloc] init];
-    [view testSearch:@"abc" inMotherStr:@"abcabc12asfdasasfabc"];
     self.logView = view;
     [self.view addSubview:view];
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
