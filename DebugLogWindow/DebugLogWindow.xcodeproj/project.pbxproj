@@ -24,6 +24,7 @@
 		BABEA44620B6FDF400F69746 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0CE23A20B6FB8F00CD4843 /* libsqlite3.tbd */; };
 		BABEA44820B6FECA00F69746 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABEA44720B6FEC900F69746 /* UIKit.framework */; };
 		BABEA44A20B6FED400F69746 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABEA44920B6FED400F69746 /* Foundation.framework */; };
+		BABEA44B20B7A5DE00F69746 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0CE23C20B6FB9D00CD4843 /* libsqlite3.0.tbd */; };
 		CA2416C9A915E5A750B0B795 /* libPods-DebugLogWindow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A80D53DD215E167FA653FC0B /* libPods-DebugLogWindow.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BABEA44B20B7A5DE00F69746 /* libsqlite3.0.tbd in Frameworks */,
 				BABEA44A20B6FED400F69746 /* Foundation.framework in Frameworks */,
 				BABEA44820B6FECA00F69746 /* UIKit.framework in Frameworks */,
 				BABEA44620B6FDF400F69746 /* libsqlite3.tbd in Frameworks */,

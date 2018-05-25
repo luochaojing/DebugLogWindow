@@ -6,17 +6,15 @@
 //  Copyright © 2018年 luochaojing. All rights reserved.
 //
 
-
-//#if FMDB_SQLITE_STANDALONE
-//#import <sqlite3/sqlite3.h>
-//#else
-//#import <sqlite3.h>
-//#endif
 #import "DLogDataBaseMgr.h"
-#import <FMDB.h>
-#import "DLogDBTable.m"
-#import <sqlite3.h>
 
+#if FMDB_SQLITE_STANDALONE
+#import <sqlite3/sqlite3.h>
+#else
+#import <sqlite3.h>
+#endif
+#import <FMDB.h>
+#import "DLogDBTable.h"
 
 
 @interface DLogDataBaseMgr()
@@ -50,7 +48,9 @@
 
 
 - (void)createDefaultConfig {
-    _dbPath  = @"debug.db";
+    NSArray * arr = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString * path = [arr objectAtIndex:0];
+    _dbPath = [path stringByAppendingPathComponent:@"debug_log.db"];
     _dbQueue = [[FMDatabaseQueue alloc] initWithPath:_dbPath flags:SQLITE_OPEN_FILEPROTECTION_NONE | SQLITE_OPEN_CREATE | SQLITE_OPEN_READWRITE | SQLITE_OPEN_WAL];
     _dispatchQueue = [[NSOperationQueue alloc] init];
     _dispatchQueue.maxConcurrentOperationCount = 1;

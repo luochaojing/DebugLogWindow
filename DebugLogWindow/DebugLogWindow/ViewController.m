@@ -33,8 +33,6 @@
         make.bottom.equalTo(self.view).offset(-40);
     }];
     [self creatTimer];
-    
-    [self testDB];
 }
 
 - (void)creatTimer {
@@ -47,24 +45,24 @@
     if (i > 15) {
         return;
     }
-    NSString *appendText = [NSString stringWithFormat:@"么的：%@\n", @(i)];
+    NSString *appendText = [NSString stringWithFormat:@"%@、log内容\n", @(i)];
 
     NSLog(@"%@", appendText);
     [self.logView addText:appendText];
     i++;
+    [self testDBWithContent:appendText];
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
-- (void)testDB {
+- (void)testDBWithContent:(NSString *)content {
     DlogModel *model = [[DlogModel alloc] init];
     model.keysArr = @[@"key1", @"key2"];
-    model.content = @"content1";
+    model.content = content;
     model.date = [NSDate date];
     [[DLogDataBaseMgr shared] addLogModel:model];
 }

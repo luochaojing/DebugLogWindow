@@ -7,14 +7,4 @@
 //
 
 #import "DLogMgr.h"
-#import "DlogModel.h"
-#import "DLogDataBaseMgr.h"
 
-@interface DLogMgr()
-
-@end
-
-@implementation DLogMgr
-
-
-@end

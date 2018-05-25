@@ -20,10 +20,12 @@
 }
 
 + (void)insertLogModel:(DlogModel *)logModel toDb:(FMDatabase *)db {
-    [db executeUpdate:@"insert into \"debug_logs_table\" (date, content) values(?,?)", [DLogTool timestampWithDate:logModel.date], logModel.content,logModel.keysArr];
+    BOOL insertStatus = [db executeUpdate:@"insert into \"debug_logs_table\" (date, content) values(?,?)", [DLogTool timestampWithDate:logModel.date], logModel.content,logModel.keysArr];
+    NSLog(@"插入log状态 = %@", @(insertStatus));
     NSInteger logID = [db intForQuery:@"select MAX(log_id) from debug_logs_table"];
     for (NSString *keyword in logModel.keysArr) {
-        [db executeUpdate:@"insert into \"debug_keywords_table\" (log_id, keyword) values(?,?)", @(logID), keyword];
+       BOOL updateKeys = [db executeUpdate:@"insert into \"debug_keywords_table\" (log_id, keyword) values(?,?)", @(logID), keyword];
+        NSLog(@"插入key状态 = %@", @(updateKeys));
     }
 }
 
