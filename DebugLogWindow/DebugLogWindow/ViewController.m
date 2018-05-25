@@ -32,7 +32,9 @@
         make.right.equalTo(self.view).offset(-30);
         make.bottom.equalTo(self.view).offset(-40);
     }];
-    [self creatTimer];
+    //[self creatTimer];
+    
+    [self testSearch];
 }
 
 - (void)creatTimer {
@@ -46,8 +48,6 @@
         return;
     }
     NSString *appendText = [NSString stringWithFormat:@"%@、log内容\n", @(i)];
-
-    NSLog(@"%@", appendText);
     [self.logView addText:appendText];
     i++;
     [self testDBWithContent:appendText];
@@ -66,5 +66,13 @@
     model.date = [NSDate date];
     [[DLogDataBaseMgr shared] addLogModel:model];
 }
+
+- (void)testSearch {
+    [[DLogDataBaseMgr shared] searchLogmodelsWithKeyWords:@[@"key1"] option:@"and" then:^(NSArray<DlogModel *> *arr) {
+        NSArray *x = arr;
+        NSLog(@"x.count = %@", x);
+    }];
+}
+
 
 @end

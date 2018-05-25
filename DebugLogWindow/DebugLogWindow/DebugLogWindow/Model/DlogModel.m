@@ -10,4 +10,9 @@
 
 @implementation DlogModel
 
+- (NSString *)description {
+    NSString *keys = [self.keysArr componentsJoinedByString:@","];
+    return [NSString stringWithFormat:@"%@:\n keys:%@ \n %@",self.date, keys, self.content];
+}
+
 @end

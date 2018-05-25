@@ -10,8 +10,7 @@
 
 @interface DLogWindowView : UIView
 
-
 - (void)addText:(NSString *)appendStr;
+- (void)clear;
 
-- (NSArray *)testSearch:(NSString *)searchStr inMotherStr:(NSString *)motherStr;
 @end

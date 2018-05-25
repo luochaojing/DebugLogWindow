@@ -16,5 +16,5 @@
 + (DLogDataBaseMgr *)shared;
 
 - (void)addLogModel:(DlogModel *)logModel;
-
+- (void)searchLogmodelsWithKeyWords:(NSArray<NSString *> *)keywords option:(NSString *)option then:(void (^)(NSArray<DlogModel *> *))then;
 @end

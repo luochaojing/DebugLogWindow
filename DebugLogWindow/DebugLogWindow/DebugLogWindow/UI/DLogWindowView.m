@@ -73,21 +73,9 @@
     [self.textView scrollRangeToVisible:NSMakeRange(self.totalString.length, 1)];
 }
 
-
-- (NSArray *)testSearch:(NSString *)searchStr inMotherStr:(NSString *)motherStr {
-    NSMutableArray *rangeArr = @[].mutableCopy;
-    NSRange range = [motherStr rangeOfString:searchStr options:NSBackwardsSearch range:NSMakeRange(0, motherStr.length)];
-    //循环检索
-    while(range.location != NSNotFound)
-    {
-        NSLog(@"start = %@",NSStringFromRange(range));
-        [rangeArr insertObject:[NSValue valueWithRange:range] atIndex:0];
-        NSUInteger start = 0;
-        NSUInteger end = range.location;
-        NSRange temp = NSMakeRange(start,end);
-        range = [motherStr rangeOfString:searchStr options:NSBackwardsSearch range:temp];
-    }
-    return rangeArr.copy;
+- (void)clear {
+    self.totalString = @"".mutableCopy;
+    self.textView.text = self.totalString;
 }
 
 - (void)setUserTouchingToNO {

@@ -10,12 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DebugLogWindow/ViewController.m"
-            timestampString = "548908099.483882"
+            timestampString = "548927593.594275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "-testDBWithContent:"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-testSearch"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DebugLogWindow/DebugLogWindow/DB/DLogDBTable.m"
+            timestampString = "548927593.594481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "+searchLogmodelsWithKeyWords:option:inDb:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,28 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DebugLogWindow/DebugLogWindow/DB/DLogDBTable.m"
-            timestampString = "548908099.48418"
+            timestampString = "548927593.594527"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "+createLogTableInDb:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DebugLogWindow/DebugLogWindow/DB/DLogDataBaseMgr.m"
-            timestampString = "548908099.485386"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "-createDefaultConfig"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "+searchLogmodelsWithKeyWords:option:inDb:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
