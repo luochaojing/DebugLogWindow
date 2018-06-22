@@ -13,7 +13,7 @@
 #else
 #import <sqlite3.h>
 #endif
-#import <FMDB.h>
+#import <FMDB/FMDB.h>
 #import "DLogDBTable.h"
 
 
@@ -46,11 +46,19 @@
     return self;
 }
 
-
-- (void)createDefaultConfig {
+- (NSString *)defaultDBPath {
     NSArray * arr = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString * path = [arr objectAtIndex:0];
-    _dbPath = [path stringByAppendingPathComponent:@"debug_log.db"];
+    return [path stringByAppendingPathComponent:@"debug_log.db"];
+}
+
+- (long long)currentDbSize {
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+}
+
+
+- (void)createDefaultConfig {
+    _dbPath = [self defaultDBPath];
     _dbQueue = [[FMDatabaseQueue alloc] initWithPath:_dbPath flags:SQLITE_OPEN_FILEPROTECTION_NONE | SQLITE_OPEN_CREATE | SQLITE_OPEN_READWRITE | SQLITE_OPEN_WAL];
     _dispatchQueue = [[NSOperationQueue alloc] init];
     _dispatchQueue.maxConcurrentOperationCount = 1;

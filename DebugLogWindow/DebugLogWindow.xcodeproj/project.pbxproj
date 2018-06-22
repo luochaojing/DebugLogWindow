@@ -21,11 +21,12 @@
 		BA0E414A20B4223C00380FC1 /* DlogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E414920B4223C00380FC1 /* DlogModel.m */; };
 		BA0E414E20B501C200380FC1 /* DLogWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E414D20B501C200380FC1 /* DLogWindowView.m */; };
 		BA0E415220B50D3F00380FC1 /* DLogTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E415120B50D3F00380FC1 /* DLogTool.m */; };
+		BAB76B3920DCEE500016699C /* DLogConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB76B3820DCEE500016699C /* DLogConfig.m */; };
 		BABEA44620B6FDF400F69746 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0CE23A20B6FB8F00CD4843 /* libsqlite3.tbd */; };
 		BABEA44820B6FECA00F69746 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABEA44720B6FEC900F69746 /* UIKit.framework */; };
 		BABEA44A20B6FED400F69746 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABEA44920B6FED400F69746 /* Foundation.framework */; };
 		BABEA44B20B7A5DE00F69746 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0CE23C20B6FB9D00CD4843 /* libsqlite3.0.tbd */; };
-		CA2416C9A915E5A750B0B795 /* libPods-DebugLogWindow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A80D53DD215E167FA653FC0B /* libPods-DebugLogWindow.a */; };
+		E7E0583C8922A51CBBC14E70 /* Pods_DebugLogWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D867488D11B133176E759E7C /* Pods_DebugLogWindow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,6 @@
 
 /* Begin PBXFileReference section */
 		6700FA4C188799D73D658601 /* Pods-DebugLogWindow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugLogWindow.release.xcconfig"; path = "Pods/Target Support Files/Pods-DebugLogWindow/Pods-DebugLogWindow.release.xcconfig"; sourceTree = "<group>"; };
-		A80D53DD215E167FA653FC0B /* libPods-DebugLogWindow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DebugLogWindow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0CE23720B6F6BC00CD4843 /* DLogMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLogMgr.h; sourceTree = "<group>"; };
 		BA0CE23820B6F6BC00CD4843 /* DLogMgr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLogMgr.m; sourceTree = "<group>"; };
 		BA0CE23A20B6FB8F00CD4843 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -78,8 +78,11 @@
 		BA0E414D20B501C200380FC1 /* DLogWindowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLogWindowView.m; sourceTree = "<group>"; };
 		BA0E415020B50D3F00380FC1 /* DLogTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLogTool.h; sourceTree = "<group>"; };
 		BA0E415120B50D3F00380FC1 /* DLogTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLogTool.m; sourceTree = "<group>"; };
+		BAB76B3720DCEE500016699C /* DLogConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLogConfig.h; sourceTree = "<group>"; };
+		BAB76B3820DCEE500016699C /* DLogConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLogConfig.m; sourceTree = "<group>"; };
 		BABEA44720B6FEC900F69746 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BABEA44920B6FED400F69746 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D867488D11B133176E759E7C /* Pods_DebugLogWindow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DebugLogWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD5C4D57DB2E9B754F571C9 /* Pods-DebugLogWindow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebugLogWindow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DebugLogWindow/Pods-DebugLogWindow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +95,7 @@
 				BABEA44A20B6FED400F69746 /* Foundation.framework in Frameworks */,
 				BABEA44820B6FECA00F69746 /* UIKit.framework in Frameworks */,
 				BABEA44620B6FDF400F69746 /* libsqlite3.tbd in Frameworks */,
-				CA2416C9A915E5A750B0B795 /* libPods-DebugLogWindow.a in Frameworks */,
+				E7E0583C8922A51CBBC14E70 /* Pods_DebugLogWindow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +132,7 @@
 				BABEA44720B6FEC900F69746 /* UIKit.framework */,
 				BA0CE23C20B6FB9D00CD4843 /* libsqlite3.0.tbd */,
 				BA0CE23A20B6FB8F00CD4843 /* libsqlite3.tbd */,
-				A80D53DD215E167FA653FC0B /* libPods-DebugLogWindow.a */,
+				D867488D11B133176E759E7C /* Pods_DebugLogWindow.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -237,6 +240,8 @@
 			children = (
 				BA0CE23720B6F6BC00CD4843 /* DLogMgr.h */,
 				BA0CE23820B6F6BC00CD4843 /* DLogMgr.m */,
+				BAB76B3720DCEE500016699C /* DLogConfig.h */,
+				BAB76B3820DCEE500016699C /* DLogConfig.m */,
 			);
 			path = Mgr;
 			sourceTree = "<group>";
@@ -403,9 +408,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DebugLogWindow/Pods-DebugLogWindow-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -440,6 +452,7 @@
 				BA0E414E20B501C200380FC1 /* DLogWindowView.m in Sources */,
 				BA0E415220B50D3F00380FC1 /* DLogTool.m in Sources */,
 				BA0E414620B4221800380FC1 /* DLogDBTable.m in Sources */,
+				BAB76B3920DCEE500016699C /* DLogConfig.m in Sources */,
 				BA0CE23920B6F6BC00CD4843 /* DLogMgr.m in Sources */,
 				BA0E414A20B4223C00380FC1 /* DlogModel.m in Sources */,
 				BA0E411120B415AB00380FC1 /* ViewController.m in Sources */,

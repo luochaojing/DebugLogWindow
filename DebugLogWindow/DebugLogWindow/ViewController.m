@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "DLogWindowView.h"
-#import <Masonry.h>
+#import <Masonry/Masonry.h>
 #import "DLogDataBaseMgr.h"
 #import "DlogModel.h"
 
@@ -31,7 +31,7 @@
         make.right.equalTo(self.view).offset(-30);
         make.bottom.equalTo(self.view).offset(-40);
     }];
-    //[self creatTimer];
+    [self creatTimer];
     
     [self testSearch];
 }
@@ -72,6 +72,7 @@
         NSLog(@"x.count = %@", x);
     }];
 }
+
 
 
 @end
