@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DebugLogWindow/ViewController.m"
-            timestampString = "551349452.022486"
+            timestampString = "551896302.1519279"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "-testSearch"
             landmarkType = "7">
          </BreakpointContent>

@@ -15,4 +15,11 @@
     return [NSString stringWithFormat:@"%@:\n keys:%@ \n %@",self.date, keys, self.content];
 }
 
++ (DlogModel *)logWithDlog:(NSString *)log {
+    DlogModel *m = [[DlogModel alloc] init];
+    m.content = log;
+    return m;
+}
+
+
 @end

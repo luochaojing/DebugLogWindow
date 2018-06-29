@@ -33,7 +33,8 @@
     }];
     [self creatTimer];
     
-    [self testSearch];
+//    [self testSearch];
+    [self testManyLogs];
 }
 
 - (void)creatTimer {
@@ -73,6 +74,23 @@
     }];
 }
 
-
+- (void)testManyLogs {
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSInteger count = 10000;
+        for (NSInteger i = 1; i <= count; i++) {
+            if (i == 1) {
+                
+            }
+            if (i < count) {
+                [[DLogDataBaseMgr shared] addLogModel:[DlogModel logWithDlog:@"这是一条数据数据数据数据数据数据书我怎么知道"]];
+            }
+            else {
+                [[DLogDataBaseMgr shared] addLogModel:[DlogModel logWithDlog:@"最后一条"]];
+            }
+            
+        }
+        NSLog(@"派发完");
+    });
+}
 
 @end

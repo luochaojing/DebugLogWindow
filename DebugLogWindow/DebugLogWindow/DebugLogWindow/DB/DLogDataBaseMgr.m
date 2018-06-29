@@ -53,7 +53,8 @@
 }
 
 - (long long)currentDbSize {
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    //NSFileManager *fileMgr = [NSFileManager defaultManager];
+    return 0;
 }
 
 

@@ -25,6 +25,12 @@
     for (NSString *keyword in logModel.keysArr) {
        [db executeUpdate:@"insert into \"debug_keywords_table\" (log_id, keyword) values(?,?)", @(logID), keyword];
     }
+    static NSInteger i = 0;
+    i++;
+    NSLog(@"插入成功：%@", @(i));
+    if ([logModel.content isEqualToString:@"最后一条"]) {
+        NSLog(@"插入完毕");
+    }
 }
 
 // "and" "or"
