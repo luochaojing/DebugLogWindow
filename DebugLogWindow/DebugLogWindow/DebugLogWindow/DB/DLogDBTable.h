@@ -15,6 +15,7 @@
 
 /// 是否需要数据库呢
 + (void)insertLogModel:(DlogModel *)logModel toDb:(FMDatabase *)db;
++ (void)insertLogModelArr:(NSArray<DlogModel *> *)logModelArr toDb:(FMDatabase *)db;
 + (BOOL)createLogTableInDb:(FMDatabase *)db;
 + (NSArray<DlogModel *> *)searchLogmodelsWithKeyWords:(NSArray<NSString *> *)keywords option:(NSString *)option inDb:(FMDatabase *)db;
 @end

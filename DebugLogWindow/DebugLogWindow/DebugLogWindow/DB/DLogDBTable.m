@@ -33,6 +33,27 @@
     }
 }
 
+
++ (void)insertLogModelArr:(NSArray<DlogModel *> *)logModelArr toDb:(FMDatabase *)db {
+    NSLog(@"批量开始");
+    NSMutableString *valuesStr = @"insert into \"debug_logs_table\" (date, content) values".mutableCopy;
+    [logModelArr enumerateObjectsUsingBlock:^(DlogModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [valuesStr appendString:[NSString stringWithFormat:@"(%zd, \"%@\")", [DLogTool timestampWithDate:obj.date].longValue, obj.content]];
+        if (idx != logModelArr.count - 1) {
+            [valuesStr appendString:@","];
+        }
+    }];
+    BOOL success = [db executeUpdate:valuesStr];
+    if (success) {
+        NSLog(@"批量结束成功");
+        return;
+    }
+    NSLog(@"批量结束失败");
+
+}
+
+
+
 // "and" "or"
 + (NSArray<DlogModel *> *)searchLogmodelsWithKeyWords:(NSArray<NSString *> *)keywords option:(NSString *)option inDb:(FMDatabase *)db {
     FMResultSet *set = nil;

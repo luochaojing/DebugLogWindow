@@ -85,6 +85,13 @@
     }];
 }
 
+- (void)addLogModelArr:(NSArray<DlogModel *> *)logModelArr {
+    [self inAsyncMainDatabase:^(FMDatabase *db) {
+        [DLogDBTable insertLogModelArr:logModelArr toDb:db];
+    }];
+}
+
+
 - (void)searchLogmodelsWithKeyWords:(NSArray<NSString *> *)keywords option:(NSString *)option then:(void (^)(NSArray<DlogModel *> *))then {
     [self inAsyncMainDatabase:^(FMDatabase *db) {
         NSArray<DlogModel *> *arr = [DLogDBTable searchLogmodelsWithKeyWords:keywords option:option inDb:db];
