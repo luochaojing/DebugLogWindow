@@ -15,5 +15,6 @@
 @property (nonatomic, copy) NSArray<NSString *> *keysArr;
 @property (nonatomic, copy) NSString *content;
 
++ (DlogModel *)logWithDlog:(NSString *)log;
 
 @end

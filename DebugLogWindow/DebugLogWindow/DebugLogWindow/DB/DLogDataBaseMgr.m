@@ -59,6 +59,7 @@
         return 0;
     }
     return [fileMgr attributesOfItemAtPath:[self defaultDBPath] error:nil].fileSize;
+    return 0;
 }
 
 
