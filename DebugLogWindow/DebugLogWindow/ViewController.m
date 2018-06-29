@@ -34,6 +34,8 @@
     [self creatTimer];
     
     [self testSearch];
+    long long currentSize = [[DLogDataBaseMgr shared] currentDbSize];
+    NSLog(@"当前大小 = %@", @(currentSize));
 }
 
 - (void)creatTimer {
@@ -71,6 +73,7 @@
         NSArray *x = arr;
         NSLog(@"x.count = %@", x);
     }];
+
 }
 
 

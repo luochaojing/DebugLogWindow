@@ -52,8 +52,13 @@
     return [path stringByAppendingPathComponent:@"debug_log.db"];
 }
 
+//
 - (long long)currentDbSize {
     NSFileManager *fileMgr = [NSFileManager defaultManager];
+    if (![fileMgr fileExistsAtPath:[self defaultDBPath]]) {
+        return 0;
+    }
+    return [fileMgr attributesOfItemAtPath:[self defaultDBPath] error:nil].fileSize;
 }
 
 

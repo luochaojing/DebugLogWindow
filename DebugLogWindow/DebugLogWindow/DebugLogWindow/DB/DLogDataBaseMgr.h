@@ -17,4 +17,6 @@
 
 - (void)addLogModel:(DlogModel *)logModel;
 - (void)searchLogmodelsWithKeyWords:(NSArray<NSString *> *)keywords option:(NSString *)option then:(void (^)(NSArray<DlogModel *> *))then;
+
+- (long long)currentDbSize;
 @end
